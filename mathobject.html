@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>mathobject</title>
+</head>
+
+<body>
+<script type="text/javascript">
+ /*   document.write(Math.PI + "<br>");
+    document.write(Math.E + "<br>");
+    
+    var n = prompt("Enter a number"," ");
+    var answer = Math.sqrt(n);
+    document.write("The square root of " + n + " is " + answer);
+
+    function doSomething()
+    {
+        document.write("fdfdf ");
+        
+    }
+    setInterval("doSomething()" , 1000);
+ */
+
+ function printTime()
+ {
+    var now = new Date();
+    var hours = now.getHours();
+    var mins = now.getMinutes();
+    var sec = now.getSeconds();
+    var milli = now.getMilliseconds();
+    document.write(hours + ":" + mins + ":" + sec + ":" + milli + "<br>");
+    
+ }
+ // 1000 is in millisecond 
+ setInterval("printTime()", 1000);
+    
+</script>
+
+
+</body>
+</html>

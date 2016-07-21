@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>formvalid</title>
+    <script type="text/javascript">
+        function validator() {
+            if (document.aform.thebox.checked) 
+                alert("checked!!");
+                else
+                alert("Nope not checked");
+            
+        }
+    </script>
+</head>
+
+<body>
+    <form name="aform">
+        <input type="checkbox" name="thebox" />
+        <input type="button" value = "press me" onClick = "validator()" />
+    </form>
+<script type="text/javascript">
+        
+</script>
+
+
+
+</body>
+</html>

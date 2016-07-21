@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>objects</title>
+    
+    <script type="text/javascript">
+        //constructor function
+        function person(name,age)
+        {
+            this.name = name;
+            this.age = age;
+            this.yearsToRetire = yearsLeft; //associating method to obj
+        }
+        
+        //method
+        function yearsLeft(){
+            var numYears = 65 - this.age;
+            return numYears;
+        }
+        //creating a instance of object
+        var anusha = new person("Anusha",30);
+        var praveen = new person("Praveen",34);
+        
+        //object initializer - faster than constructor
+        //color and size are properties
+        
+        banana = {color:"yellow",size:"small"};
+        orange = {color:"orange",size:"big"};
+
+    </script>
+</head>
+
+<body>
+<script type="text/javascript">
+    var tuna = "hey i am a fish";
+    document.write(tuna.length); //length is property of object tuna
+    
+    document.write("<br>"+"Hey now brown cow"+"<br>"); //document is an object
+    //one of its method is write
+
+    //calling the object
+    document.write(anusha.name + "<br>");
+    document.write(praveen.age+ "<br>");
+    
+    //method
+    document.write(anusha.age+ "<br>");
+    document.write(praveen.name + " has " +praveen.yearsToRetire() + " years to retire"+ "<br>");
+
+    //calling initiliazed object
+    document.write(banana.color+ "<br>");
+    
+</script>
+
+
+</body>
+</html>

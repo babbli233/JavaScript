@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Calc</title>
+</head>
+
+<body>
+ <div>
+<form id = "form1">
+    Number 1 :
+    <input type = "text"  id = "num1" value= "" />
+    Number 2 :
+    <input type = "text"  id = "num2" value = ""/> <br>
+    Answer : <br>
+    <input type = "text" id = "sol" value = ""/> <br>
+    <input type="button" value  = "Calculate" onclick = "MyCalculate()";/>
+    <input type="reset" value  = "Clear" />
+
+</form>    
+</div>
+<script type="text/javascript">
+    
+    function MyCalculate()
+    {
+        var x = parseInt(document.getElementById("num1").value);
+        var y = parseInt(document.getElementById("num2").value);
+        var ans = x * y;
+        document.getElementById("sol").value = ans;
+    }
+    
+</script>
+
+
+</body>
+</html>

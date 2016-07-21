@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>arrays</title>
+</head>
+
+<body>
+    
+<script type="text/javascript">
+    var names = new Array("Anusha","praveen","sriyan");
+    document.write(names[1]+"<br>");
+    
+    var fruits = new Array(3);
+    fruits[0] = "apple";
+    fruits[1] = "mango";
+    fruits[2] = "banana";
+    document.write(fruits[2]+"<br>");
+    
+    var stuff = new Array();
+    stuff[0] = "stuff0";
+    stuff[10] = "stuff10";
+
+    document.write(stuff[10]+"<br>");
+    document.write(stuff[0]+"<br>");
+
+    //array properties and methods
+    
+    var ppl = new Array("anu","pravs","sri");
+    document.write("length of the array ppl = " + ppl.length + "<br>");
+    
+    var animals = new Array ("cow","cat");
+    var total = ppl.concat(animals);
+    document.write(total[3] + "<br>");
+    
+    //join connects two arrays
+    
+    var movies = new Array("fight club","minion","penguins");
+    var string1 = movies.join( " : ");
+    var string2 = movies.join( " -> ");
+
+    document.write(string1+ "<br>");
+    document.write(string2+ "<br>");
+
+    //pop removes last elemnt from array 
+    movies.pop();
+    document.write(movies+"<br>");
+    movies.pop();
+    document.write(movies+"<br>");
+    
+    //reverse push and sort
+    
+    var bodyParts = new Array("head","shoulder","knees","toes");
+    document.write(bodyParts.reverse()+"<br>");
+    
+    bodyParts.push("tongue","lips");
+    document.write(bodyParts + "<br>");
+    document.write(bodyParts.sort());
+    
+</script>
+
+
+</body>
+</html>

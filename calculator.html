@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Calc</title>
+    <style>
+        .center
+        {
+        margin: auto;
+        width: 80%;
+        padding: 10px;
+        }
+        h1{
+        text-align: center;
+        color: hotpink;
+        }
+    input[type=text], select {
+    width: 20%
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#opp {
+    width:10%;
+}
+input[type=button] {
+    width: 25%;
+    background-color: hotpink;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    
+}
+
+input[type=button]:hover {
+    background-color: pink;
+    color:black;
+}
+
+div {
+    
+    width:75%;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+</style>
+
+</head>
+
+<body>
+    <H1>Basic Calculator</H1>
+ <div class="center">
+    
+<form id = "form1">
+    Number 1 :  
+      <input type = "text"  id = "num1" value= "" /><br>
+    Number 2 :  
+      <input type = "text"  id = "num2" value = ""/> <br>
+    Opperator :  <input type="text" size = "1" id = "opp" value = "" /> (+,-,*,/,%)
+    <br>
+    Answer :  
+        <input type = "text" id = "sol" value = ""/> <br>
+    <input type="button" value  = "Calculate" onclick = "MyCalculate()";/>
+    <input type="button" value  = "Clear" onclick = "clearForm();" />
+
+</form>    
+</div>
+<script type="text/javascript">
+    
+    
+    
+    function MyCalculate()
+    {
+        var x = parseInt(document.getElementById("num1").value);
+        var y = parseInt(document.getElementById("num2").value);
+        var operator = document.getElementById("opp").value;
+        switch(operator){
+            case "+" :
+                ans = x + y ;
+                break;
+            case "-" :
+                ans = x - y ;
+                break;
+            case "*" :
+                ans = x * y ;
+                break;
+            case "/" :
+                ans = x / y ;
+                break;
+            case "%" :
+                ans = x % y ;
+                break;
+            default:
+                ans = "Undefined operator";
+        }
+        document.getElementById("sol").value = ans;
+    }
+    function clearForm(){
+        document.getElementById("form1").reset();
+    }
+    
+   
+
+    
+</script>
+
+
+</body>
+</html>

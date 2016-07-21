@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>First Letter to Upper Case</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <p id = "test"> hellow </p>
+    <script>
+        function uCase(str)
+        {
+            var array = str.split(' ');
+            var newarray = [ ];
+            for(var x = 0 ; x < array.length ; x++){
+                newarray.push(array[x].charAt(0).toUpperCase()+array[x].slice(1));
+                
+            }
+            return newarray.join(' ');
+        }
+        
+        var str = prompt("Enter a string");
+        document.write(uCase(str));
+        
+        $(document).ready(function()
+        {
+            $('#test').hide();
+        });
+    </script>
+
+
+
+</body>
+</html>

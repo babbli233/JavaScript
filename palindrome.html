@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Palindrome</title>
+</head>
+
+<body>
+    <script>
+        function palindrome(str)
+        {
+            var compare = str.toLowerCase().replace(/\s+/g,'');
+            var newStr = compare.split('').reverse().join('');
+            if (compare === newStr) {
+                document.write("Orig Word is " + str + "<br>");
+                document.write("convert Word is " + compare + "<br>");
+
+                document.write("Rev word is " + newStr+"<br>");
+                document.write("Is Palindrome" +"<br>");
+            }
+            else{
+                document.write("Orig Word is " + str+"<br>");
+                document.write("convert Word is " + compare + "<br>");
+
+                document.write("Rev word is " + newStr+"<br>");
+                document.write("Not a palindrome"+"<br>");
+            }
+            
+        }
+        
+        var str = prompt("enter a string");
+        palindrome(str);
+    </script>
+
+
+
+</body>
+</html>

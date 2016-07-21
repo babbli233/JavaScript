@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>forms</title>
+</head>
+
+<body>
+<form>
+    Username : <input type = "text" />
+    <br>
+    Password : <input type = "pass" />
+    <br>
+    <input type = "submit" value = "submit" />
+    <br>
+</form>
+
+<form name="Aform">
+    Username : <input type = "username" name = "username"/>
+    <br>
+    Password : <input type = "password" name = "password"/>
+    <br>
+    <input type = "submit" value = "submit" />
+    <br>
+</form>
+    
+<script type="text/javascript">
+    
+    var x = document.forms[0].length;    
+    document.write(x);
+ //if there are multiple forms they are stored like array so form[0] is first one
+ 
+ var y = document.forms[1].elements[0].name;
+ //gives acesses to username i.e. element 0
+ document.write("<br>"+y);
+ 
+ var z = document.Aform.elements[1].name;
+ //gives acesses to username i.e. element 0
+ document.write("<br>"+z);
+ 
+</script>
+
+
+</body>
+</html>

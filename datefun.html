@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Date function</title>
+</head>
+
+<body>
+
+<script type="text/javascript">
+    var x = new Date();
+    var wdays = ["Sunday","Monday","Tuesday","Wedneday","Thursday","Friday","Saturday"];
+    var today = wdays[x.getDay()];
+    var hour = x.getHours();
+    var mins = x.getMinutes();
+    var second = x.getSeconds();
+    if (hour > 12) {
+        meridian = "PM"
+    }else {
+        meridian = "AM"
+    }
+    hour = (hour >12 )? hour-12 : hour ;
+    document.write("Today is : " + today + "<br>");
+    document.write("Current Time is : " + hour  + meridian + ":" + mins + ":" + second);
+
+    
+</script>
+
+
+</body>
+</html>

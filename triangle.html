@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Area Of Shapes</title>
+    <style>
+        input[type=button]
+        {
+            width: 15%;
+            background-color: hotpink;
+            color: white;
+            padding: 15px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=button]:hover
+        {
+            background-color: magenta;
+            color:black;
+        }
+        div
+        {
+            width:50%;
+            border-radius: 5px;
+            background-color: pink;
+            padding: 20px;
+        }
+        .center
+        {
+            margin: auto;
+            width: 80%;
+            padding: 10px;
+        }
+
+    </style>
+    
+</head>
+
+<body>
+    
+<div class="center">
+    <form>
+        <input type="button" id = "tri" value = "Triangle" onclick="calcArea('triangle');"/>
+        <input type="button" id = "sqr" value = "Square" onclick="calcArea('square');"/>
+        <input type="button" id = "rect" value = "Rectangle" onclick="calcArea('rectangle');"/>
+        <input type="button" id = "circ" value = "Circle" onclick="calcArea('circle');"/>
+        <br><br>
+        Area <input type = "text" id = "area" value = "" />
+        <input type="reset" value  = "Clear" />
+    </form>
+</div>
+    
+<script type="text/javascript">
+    var area;
+function calcArea(shape)
+{
+    switch(shape)
+    {
+        case "triangle":
+            
+            var x = parseInt(prompt("Enter the value for side 1"));
+            var y = parseInt(prompt("Enter the value for side 2"));
+            var z = parseInt(prompt("Enter the value for side 3"));
+            var perimeter = (x+y+z)/2;
+            area = Math.sqrt(perimeter*((perimeter-x)*(perimeter-y)*(perimeter-z)));
+            break;
+        case "square":
+            var sl = parseInt(prompt("Enter the length"));
+            area = sl * sl ;
+            break;
+        case "rectangle":
+            var l = parseInt(prompt("Enter the length"));
+            var b = parseInt(prompt("Enter the length"));
+            area = ( l * b );    
+            break;
+        case "circle":
+            var r = parseInt(prompt("Enter the radius of the circle"));
+            area = (2*r*Math.PI);
+            break;
+        default:
+            document.write("Some problem occured");
+    }
+    document.getElementById("area").value = area ;
+
+}
+</script>
+
+
+</body>
+</html>
